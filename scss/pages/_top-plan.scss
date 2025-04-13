@@ -1,0 +1,80 @@
+//top-plan
+@use '../util/index' as *;
+
+.plan__inner {
+  padding: 80px;
+}
+
+.plan__tabList {
+  display : flex;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 40px;
+}
+.plan__tabItem {
+  width: 280px;
+  padding: 8px;
+  text-align: center;
+  color: $gray;
+  border-bottom: 1px solid $gray;
+  transition: color .3s ease-in-out , border-bottom .3s ease-in-out;
+}
+.plan__tabItem:hover,
+.plan__tabItem.is-active {
+  color: $mainColor;
+  border-bottom: 1px solid $subColor;
+}
+.plan__tabLink {
+  display: block;
+  width: 100%;
+  font-size: 1.8rem;
+  font-weight: bold;
+  line-height: 1.75;
+}
+
+.plan__block {
+  width: 100%;
+  max-width: 640px;
+  margin: 40px auto 0;
+}
+.plan__block--sea,
+.plan__block--green {
+  display: none; /* 一旦非表示にする */
+}
+
+
+.plan__imageWrap > img {
+  width: 100%;
+  height: auto;
+}
+.plan__textWrap {
+  margin-top: 40px;
+}
+.plan__deschead {
+  padding-bottom: 8px;
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1.75;
+  color: $mainColor;
+  text-align: center;
+}
+.plan__descWrap {
+  font-family: 'Noto Sans JP', sans-serif;
+}
+.plan__desc {
+  margin-top: 10px;
+  line-height: 1.75;
+}
+.plan__btnWrap {
+  margin-top: 40px;
+  text-align: center;
+}
+.plan__btn {
+  display: inline-block;
+  padding: 16px 0;
+  width: 360px;
+  font-size: 2rem;
+  line-height: 1.5;
+  color: #fff;
+  background-color: $mainColor;
+}
