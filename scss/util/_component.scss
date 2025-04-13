@@ -2,4 +2,18 @@
 @use './variables' as *;
 @use './mixin' as *;
 
-//c-sectionPadding
+// c-sectionPadding
+.c-sectionTitle {
+  font-family: "pinyon Script", serif;
+  font-size: 3.6rem;
+  text-align: center;
+  color: $mainColor;
+}
+.c-sectionSubTitle {
+  display: block;
+  font-family: "Noto Sans JP", sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.75;
+  text-align: center;
+  color: $mainColor;
+}
