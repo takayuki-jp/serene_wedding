@@ -1,0 +1,18 @@
+@charset 'uft-8';
+
+//base
+@use 'base/base';
+@use 'base/reset';
+
+//utility
+@use 'util/component';
+@use 'util/index';
+@use 'util/mixin';
+@use 'util/variables';
+
+//layout
+@use 'layout/header';
+@use 'layout/footer';
+
+//Pages
+@use 'pages/top-fv';

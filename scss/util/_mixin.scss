@@ -1,0 +1,18 @@
+//mixin
+@use './variables' as *;
+
+// mediaQuery（最大幅）
+$sp: 720px;
+$tb: 1024px;
+
+@mixin sp {
+  @media screen and (max-width: #{$sp}) {
+    @content;
+  }
+}
+
+@mixin tb {
+  @media screen and (min-width: #{$sp + 1}) and (max-width: #{$tb}) {
+    @content;
+  }
+}
