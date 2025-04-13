@@ -3,15 +3,16 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <title>Serene Wedding</title>
   <meta name="description" content="深い愛を誓うお二人へ、一生に残るリゾートウエディングを叶えます。">
   <link rel="icon" href="img/favicon.svg">
-
   <!-- css -->
   <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
-  <link rel="stylesheet" href="./css/style.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <!-- splide -->
+  <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
+  <!-- fontawesome -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.7.2/css/all.css">
   <script src="https://kit.fontawesome.com/6f9cf09e6e.js" crossorigin="anonymous"></script>
 </head>
@@ -64,7 +65,49 @@
         </div>
       </section>
 
-      <section id="pickUp" class="pickUp"></section>
+      <section id="pickup" class="pickup">
+        <div class="pickup__inner">
+          <h2 class="pickup__title c-sectionTitle">
+            Pickup
+            <span class="pickup__subTitle c-sectionSubTitle">おすすめ情報</span>
+          </h2>
+          <div id="splide" class="splide pickup__splide">
+            <div class="splide__track">
+              <ul class="splide__list">
+                <li class="splide__slide pickup__splideItem">
+                  <img class="pickup__itemImg" src="./img/pickup_1.webp" alt="シーズン限定プラン">
+                  <h3 class="pickup__itemTitle">シーズン限定プラン</h3>
+                  <p class="pickup__itemDesc">季節に応じた四季折々の自然美をバックに撮影</p>
+                <li class="splide__slide">
+                  <img class="pickup__itemImg" src="./img/pickup_2.webp" alt="【夏季限定】サンセットプラン">
+                  <h3 class="pickup__itemTitle">【夏季限定】サンセットプラン</h3>
+                  <p class="pickup__itemDesc">夏ならではの鮮やかな夕日をバックに、幻想的なお二人を演出します。</p>
+                </li>
+                <li class="splide__slide">
+                  <img class="pickup__itemImg" src="./img/pickup_3.webp" alt="早期予約限定キャンペーン">
+                  <h3 class="pickup__itemTitle">早期予約限定キャンペーン</h3>
+                  <p class="pickup__itemDesc">挙式日の6ヶ月以上前に予約された方を対象に、様々な特典をご用意</p>
+                </li>
+                <li class="splide__slide">
+                  <img class="pickup__itemImg" src="./img/pickup_1.webp" alt="シーズン限定プラン">
+                  <h3 class="pickup__itemTitle">シーズン限定プラン</h3>
+                  <p class="pickup__itemDesc">季節に応じた四季折々の自然美をバックに撮影</p>
+                <li class="splide__slide">
+                  <img class="pickup__itemImg" src="./img/pickup_2.webp" alt="【夏季限定】サンセットプラン">
+                  <h3 class="pickup__itemTitle">【夏季限定】サンセットプラン</h3>
+                  <p class="pickup__itemDesc">夏ならではの鮮やかな夕日をバックに、幻想的なお二人を演出します。</p>
+                </li>
+                <li class="splide__slide">
+                  <img class="pickup__itemImg" src="./img/pickup_3.webp" alt="早期予約限定キャンペーン">
+                  <h3 class="pickup__itemTitle">早期予約限定キャンペーン</h3>
+                  <p class="pickup__itemDesc">挙式日の6ヶ月以上前に予約された方を対象に、様々な特典をご用意</p>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </section>
 
       <section id="plan" class="plan"></section>
 
@@ -81,4 +124,6 @@
   </div><!--header-main-wrapper -->
 
   <footer></footer>
+
+  <script src="./js/main.js"></script>
 </body>
