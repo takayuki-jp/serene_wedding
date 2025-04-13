@@ -8,8 +8,8 @@ h1, h2, h3, h4, h5, h6, p, dl, dd, ul, li {
   font-size: 1.6rem;
   font-weight: 400;
   line-height: 1;
-  color: #222;
-  line-height: 1;
+  letter-spacing: 0.08em;
+  color: #333;
 }
 a {
   color: inherit;
@@ -20,4 +20,6 @@ li {
 }
 img {
   vertical-align: bottom;
+  max-width: 100%;
+  height: auto;
 }
