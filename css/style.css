@@ -291,13 +291,12 @@ img {
 
 .plan__tabList {
   display: flex;
-  justify-content: center;
-  gap: 40px;
+  justify-content: space-between;
   margin-top: 40px;
 }
 
 .plan__tabItem {
-  width: 280px;
+  width: 30.4%;
   padding: 8px;
   text-align: center;
   color: #bbb;
@@ -370,4 +369,68 @@ img {
   line-height: 1.5;
   color: #fff;
   background-color: #A88657;
+}
+
+.feature {
+  background-color: #f6f6f6;
+}
+
+.feature__inner {
+  padding: 80px;
+}
+
+.feature__contentWrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 160px;
+  margin-top: 40px;
+}
+
+.feature__content {
+  display: flex;
+  align-items: flex-end;
+}
+
+.feature__content:nth-of-type(2) {
+  flex-direction: row-reverse;
+}
+
+.feature__img {
+  width: 54.3%;
+  height: auto;
+}
+
+.feature__textWrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  width: 54.3%;
+  height: 280px;
+  margin-left: -80px;
+  margin-bottom: -63px;
+  padding: 58px 16px;
+  background-color: #fff;
+}
+
+.feature__content:nth-of-type(2) .feature__textWrap {
+  position: relative;
+  margin-left: 0;
+  margin-right: -80px;
+  z-index: 0;
+}
+
+.feature__descHead {
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 1.75;
+  color: #A88657;
+  text-align: center;
+}
+
+.feature__desc {
+  line-height: 1.75;
+  text-align: left;
 }/*# sourceMappingURL=style.css.map */

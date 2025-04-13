@@ -7,12 +7,12 @@
 
 .plan__tabList {
   display : flex;
-  justify-content: center;
-  gap: 40px;
+  justify-content: space-between;
+  // gap: 40px;
   margin-top: 40px;
 }
 .plan__tabItem {
-  width: 280px;
+  width: 30.4%;
   padding: 8px;
   text-align: center;
   color: $gray;
