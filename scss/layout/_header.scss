@@ -1,2 +1,89 @@
 //header
 @use '../util/index' as *;
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 200px;
+}
+.header__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;;
+  padding: 40px 16px 24px;
+}
+.header__logo {
+  position: relative;
+  margin-bottom: 24px;
+  padding-bottom: 24px;
+  font-size: 2.4rem;
+  font-weight: bold;
+}
+.header__logo span {
+  font-size: 2rem;
+}
+.header__logo::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: $gray;
+}
+
+.header__nav {
+  width: 100%;
+}
+
+.header__navList {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+  width: 100%;
+}
+.header__navListItem {
+  width: 100%;
+  text-align: center;
+}
+
+.header__navLink {
+  display: block;
+  width: 100%;
+  font-weight: bold;
+  line-height: 1.75;
+}
+.header__navLink--contact {
+  padding: 8px 16px;
+  color: #fff;
+  background-color: $mainColor;
+}
+
+.header__snsList {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin-top: 24px;
+  align-items: center;
+}
+.header__snsListItem {
+  width: 40px;
+  height: 40px;
+}
+.header__snsLink {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  color: $mainColor;
+}
+.header__snsLink--instagram {
+  font-size: 3.3rem;
+}
+.header__snsLink--facebook {
+  font-size: 3rem;
+}

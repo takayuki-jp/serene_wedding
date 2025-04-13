@@ -5,22 +5,19 @@
 //   outline: 2px red solid;
 //   }
 
-.wrap {
-  overflow: hidden;
-}
-
 
 /* base
 ============================= */
 /* googleFonts */
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Zen+Kaku+Gothic+New:wght@300;400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Zen+Old+Mincho:wght@400;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pinyon+Script&display=swap');
 
 
-  /* fontSize */
-  html {
-    font-size: 62.5%;
-  }
-
+/* fontSize */
+html {
+  font-size: 62.5%;
+}
 
 body {
   //layout
@@ -29,7 +26,7 @@ body {
   min-height: 100vh;
   margin: 0;
   //font
-  font-family:  "Zen Kaku Gothic New", "Open Sans", "Hiragino Sanas", "Hiragino Kaku Gothic ProN", "Yu Gothic", "Helvetica Neue", "Arial", sans-serif;
+  font-family: "Zen Old Mincho", "Noto Sans JP", "Open Sans", "Hiragino Sanas", "Hiragino Kaku Gothic ProN", "Yu Gothic", "Helvetica Neue", "Arial", sans-serif;
   font-weight: 400;
   line-height: 1;
   font-size: 1.6rem;
@@ -39,10 +36,6 @@ body {
   box-sizing: border-box;
   transition: all .3s ease;
   overflow-x: hidden;
-}
-
-main {
-  flex: 1;
 }
 
 a:hover {
@@ -62,37 +55,7 @@ a:hover {
   }
 }
 
-//animation -target-
-.animeTarget {
-  transition: all 1s ease;
-}
-.animeTarget.animeTrigger {
-  opacity: 1;
-  transform: translate(0);
-}
-
-
-
-
-//animation -fadeIn-
-.fadeIn {
-  opacity: 0;
-}
-
-//animation -SlideIn-
-.slideInLtoR {
-  opacity: 0;
-  transform: translateX(-50px);
-}
-.slideInRtoL {
-  opacity: 0;
-  transform: translateX(50px);
-}
-.slideInUtoB {
-  opacity: 0;
-  transform: translateY(-50px);
-}
-.slideInBtoU {
-  opacity: 0;
-  transform: translateY(50px);
+/* 2columns */
+.header-main-wrapper {
+  display: flex;
 }
