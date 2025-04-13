@@ -182,4 +182,30 @@ img {
   height: 100vh;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.copy__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 80px;
+}
+
+.copy__line {
+  display: block;
+  width: 1px;
+  height: 50px;
+  margin: 0 auto;
+  background-color: #333;
+}
+
+.copy__catchCopy {
+  font-size: 2.4rem;
+  line-height: 1.75;
+}
+
+.copy__desc {
+  margin-top: 24px;
+  line-height: 1.75;
+  text-align: center;
 }/*# sourceMappingURL=style.css.map */
