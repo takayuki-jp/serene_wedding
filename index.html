@@ -21,7 +21,7 @@
   <div class="header-mainArea-wrapper">
 
     <header class="header">
-      <div class="header__inner">
+      <div class="header__inner header--pc">
         <h1 class="header__logo">
           <a href="#top">
             Serene<br>
@@ -43,6 +43,35 @@
           </ul>
         </nav>
       </div>
+
+      <div class="header--sp">
+        <div class="header__inner--sp">
+          <div class="header__spLogo">
+            <a href="#top">
+              Serene<br>
+              <span class="spLogo">Wedding</span>
+            </a>
+          </div>
+          <div class="header__spMenuBtn">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+        </div>
+        </div>
+        <nav class="header__nav--sp">
+          <ul class="header__navList">
+            <li class="header__navListItem"><a class="header__navLink" href="#pickUp">Pickup</a></li>
+            <li class="header__navListItem"><a class="header__navLink" href="#plan">Plan</a></li>
+            <li class="header__navListItem"><a class="header__navLink" href="#feature">Feature</a></li>
+            <li class="header__navListItem"><a class="header__navLink" href="#gallery">gallery</a></li>
+            <li class="header__navListItem"><a class="header__navLink header__navLink--contact" href="#contact">Contact</a></li>
+          </ul>
+          <ul class="header__snsList">
+            <li class="header__snsListItem"><a class="header__snsLink header__snsLink--instagram" href="https://www.instagram.com/"><i class="fa-brands fa-instagram"></i></a></li>
+            <li class="header__snsListItem"><a class="header__snsLink header__snsLink--facebook" href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a></li>
+          </ul>
+        </nav>
     </header>
 
     <div class="mainArea">
@@ -53,7 +82,7 @@
               <source src="./video/fv.mp4" type="video/mp4">
               <source src="./video/fv.webm" type="video/webm">
               お使いのブラウザは動画に対応していません。
-            <img class="fv__img" src="./video/fv.webp" alt="Serene Wedding">
+            <img class="fv__img" src="./img/fv.webp" alt="Serene Wedding">
           </div>
         </section>
 
@@ -61,11 +90,11 @@
           <div class="copy__inner">
             <span class="copy__line"></span>
             <h2 class="copy__catchCopy">
-              穏やかな自然の中で、二人だけの特別な瞬間を。
+              穏やかな自然の中で、<br class="sp-only">二人だけの特別な瞬間を。
             </h2>
             <p class="copy__desc">
               心地よい風と美しい景色に囲まれながら、<br>
-              深い愛を誓うお二人へ、一生に残るリゾートウエディングを叶えます。
+              深い愛を誓うお二人へ、<br class="sp-only">一生に残るリゾートウエディングを叶えます。
             </p>
           </div>
         </section>
@@ -122,9 +151,9 @@
             </h2>
 
             <ul class="plan__tabList">
-              <li class="plan__tabItem is-active"><a class="plan__tabLink" href="#season">四季のウエディング</a></li>
-              <li class="plan__tabItem"><a class="plan__tabLink" href="#sea">海辺のウエディング</a></li>
-              <li class="plan__tabItem"><a class="plan__tabLink" href="#green">新緑のウエディング</a></li>
+              <li class="plan__tabItem is-active"><a class="plan__tabLink" href="#season">四季の<br class="sp-only">ウエディング</a></li>
+              <li class="plan__tabItem"><a class="plan__tabLink" href="#sea">海辺の<br class="sp-only">ウエディング</a></li>
+              <li class="plan__tabItem"><a class="plan__tabLink" href="#green">新緑の<br class="sp-only">ウエディング</a></li>
             </ul>
 
           <div id="season" class="plan__block plan__block--season">
@@ -132,7 +161,7 @@
               <img src="./img/plan_1.webp" alt="四季のウエディングイメージ画像">
             </div>
             <div class="plan__textWrap">
-              <h3 class="plan__deschead">四季折々の美しさを存分に味わう、心温まるウエディング</h3>
+              <h3 class="plan__deschead">四季折々の美しさを存分に味わう、<br class="sp-only">心温まるウエディング</h3>
               <div class="plan__descWrap">
                 <p class="plan__desc">
                   四季の移ろいを、お二人の人生最高の日に。<br>

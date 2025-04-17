@@ -49,16 +49,23 @@ a:hover {
     display: none;
   }
 }
-@include tb {
-  .sp-only {
-    display: none;
-  }
-}
+
 
 /* 2columns */
 .header-mainArea-wrapper {
   display: flex;
+  @include sp {
+    flex-direction: column;
+  }
 }
+
 main {
   flex: 1;
+}
+
+.mainArea {
+  width: calc(100% - 200px);
+  @include sp {
+    width: 100%;
+  }
 }
