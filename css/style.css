@@ -514,7 +514,7 @@ img {
 .plan__tabList {
   display: flex;
   justify-content: space-between;
-  margin-top: 40px;
+  margin: 0 auto 40px;
 }
 
 .plan__tabItem {
@@ -548,12 +548,18 @@ img {
 .plan__block {
   width: 100%;
   max-width: 640px;
-  margin: 40px auto 0;
+  height: 0;
+  margin: 0 auto;
+  opacity: 0;
+  visibility: hidden;
+  overflow: hidden;
+  transition: opacity 0.3s ease, height 0.3s ease;
 }
 
-.plan__block--sea,
-.plan__block--green {
-  display: none; /* 一旦非表示にする */
+.plan__block.is-active {
+  height: auto;
+  opacity: 1;
+  visibility: visible;
 }
 
 .plan__imageWrap > img {

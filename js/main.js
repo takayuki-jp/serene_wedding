@@ -39,5 +39,27 @@ document.addEventListener("DOMContentLoaded", function() {
   }).mount();
 
 
+  //plan
+  const tabItems = document.querySelectorAll(".plan__tabItem");
+  const planBlocks = document.querySelectorAll(".plan__block");
+
+  tabItems.forEach((tab, index) => {
+    tab.addEventListener("click", (e) => {
+      e.preventDefault();
+
+      //全てのタブとブロックをリセット（非表示）にする
+      tabItems.forEach(item => item.classList.remove('is-active'));
+      planBlocks.forEach(block => block.classList.remove('is-active'));
+
+      //クリックされたタブをアクティブにし、対応するブロックを表示
+      tab.classList.add("is-active");
+      planBlocks[index].classList.add("is-active");
+    });
+  });
+
+  //初期状態では最初のブロックを表示
+  tabItems[0].classList.add('is-active');
+  planBlocks[0].style.display = 'block';
+
 
 });
