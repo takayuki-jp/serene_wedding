@@ -1,6 +1,7 @@
 //top-contact
 @use '../util/index' as *;
 
+
 .cta__gridWrap {
   width: 100%;
   max-width: 1080px;
@@ -10,6 +11,11 @@
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto auto;
   gap: 40px;
+  @media screen and (max-width: 768px) {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    gap: 24px;
+  }
 }
 
 .cta__gridItem {
@@ -36,11 +42,20 @@
   padding: 80px 40px;
   background: url(../img/contact-cta.webp) no-repeat center center;
   background-size: cover;
+  @media screen and (max-width: 768px) {
+    grid-row: 1;
+    padding: 40px 20px;
+    // aspect-ratio: 16 / 11;
+  }
 }
 .contactBlock__content {
   display: flex;
   align-items: center;
   gap: 40px;
+  @include sp {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .contactBlock__textArea {
@@ -49,6 +64,10 @@
   flex-direction: column;
   justify-content: center;;
   color: #fff;
+  @include sp {
+    width: 100%;
+    text-align: center;
+  }
 }
 .contactBlock__title {
   font-size: 2.4rem;
@@ -56,7 +75,13 @@
   line-height: 1.75;
   color: #fff;
 }
+.contactBlock__subTitle {
+  display: block;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
 .contactBlock__sectionDesc {
+  margin-top: 24px;
   font-weight: 600;
   line-height: 1.75;
   color: #fff;
@@ -73,17 +98,27 @@
 
 .snsCtaBlock {
   grid-row: 2 / 2;
-  aspect-ratio: 2 / 1;
-  min-height: 150px;
-  background-size: cover;
+  aspect-ratio: 12 / 5;
+  // min-height: 150px;
+  
 }
 .snsCtaBlock--instagram {
   grid-column: 1 / 2;
   background: url(../img/instagram-cta.webp) no-repeat center center;
+  background-size: cover;
+  @media screen and (max-width: 768px) {
+    grid-column: 1 / 1;
+    grid-row: 2 / 3;
+  }
 }
 .snsCtaBlock--facebook {
   grid-column: 2 / 3;
   background: url(../img/facebook-cta.webp) no-repeat center center;
+  background-size: cover;
+  @media screen and (max-width: 768px) {
+    grid-column: 1 / 1;
+    grid-row: 3 / 4;
+  }
 }
 .snsCtaBlock__btn {
   display: flex;
