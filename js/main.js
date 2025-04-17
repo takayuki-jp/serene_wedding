@@ -1,4 +1,15 @@
 document.addEventListener("DOMContentLoaded", function() {
+  // sp-menu
+  const header = document.querySelector(".header");
+  const menuBtn = document.querySelector(".header__spMenuBtn");
+  const body = document.body;
+
+  menuBtn.addEventListener("click", () => {
+    header.classList.toggle('panelActive');
+    body.classList.toggle('noScroll');
+  });
+
+
   //splide
   new Splide(".splide", {
     autoplay: false,

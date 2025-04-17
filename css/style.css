@@ -44,6 +44,10 @@ body {
   overflow-x: hidden;
 }
 
+.noScroll {
+  overflow: hidden;
+}
+
 a:hover {
   cursor: pointer;
 }
@@ -134,10 +138,7 @@ img {
   padding-bottom: 24px;
   font-size: 2.4rem;
   font-weight: bold;
-}
-
-.header__spLogo {
-  display: none;
+  transition: opacity 0.3s ease;
 }
 
 .header__logo span {
@@ -275,21 +276,11 @@ img {
     bottom: 0;
     left: 0;
   }
-  .header__spMenuBtn.active > span:nth-child(1) {
-    transform: rotate(45deg);
-    top: 50%;
-  }
-  .header__spMenuBtn.active > span:nth-child(2) {
-    opacity: 0;
-  }
-  .header__spMenuBtn.active > span:nth-child(3) {
-    transform: rotate(-45deg);
-    top: 50%;
-  }
   .header__spLogo {
     display: block;
     font-size: 2.4rem;
     font-weight: bold;
+    transition: opacity 0.3s ease;
   }
   .header__spLogo span {
     font-size: 2rem;
@@ -321,6 +312,27 @@ img {
   }
   .header__snsList {
     margin-top: 0;
+  }
+  .header.panelActive .header__spMenuBtn > span:nth-child(1) {
+    transform: rotate(45deg);
+    top: 50%;
+  }
+  .header.panelActive .header__spMenuBtn > span:nth-child(2) {
+    opacity: 0;
+  }
+  .header.panelActive .header__spMenuBtn > span:nth-child(3) {
+    transform: rotate(-45deg);
+    top: 50%;
+  }
+  .header.panelActive .header__spLogo {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+  .header.panelActive .header__nav--sp {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all;
   }
 }
 .footer__inner {
