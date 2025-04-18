@@ -62,4 +62,32 @@ document.addEventListener("DOMContentLoaded", function() {
   planBlocks[0].style.display = 'block';
 
 
+//modal
+console.log("DOM Ready!");
+  const galleryItems = document.querySelectorAll(".gallery__item img");
+  const modal = document.getElementById("modal");
+  const modalImage = document.getElementById("modalImage");
+  const modalClose = document.querySelector(".modal__close");
+
+  // ギャラリーの画像をクリックしたときの処理
+  galleryItems.forEach(item => {
+    item.addEventListener("click", () => {
+      modalImage.src = item.src; //クリックした画像のURLをモーダルに設定
+      modal.classList.add("is-active"); //モーダルを表示
+    });
+  });
+
+  // モーダルを閉じる処理
+  modalClose.addEventListener("click", () => {
+    modal.classList.remove("is-active");
+  });
+
+  //モーダルの背景をクリックしても閉じる
+  modal.addEventListener("click", (e) => {
+    if (e.target === modal) {
+      modal.classList.remove("is-active");
+    }
+  });
+
+
 });

@@ -45,7 +45,7 @@
   opacity: 0;
   visibility: hidden;
   overflow: hidden;
-  transition: opacity .3s ease, height .3s ease;
+  transition: opacity 2s ease, height 2s ease;
 }
 .plan__block.is-active {
   height: auto;
