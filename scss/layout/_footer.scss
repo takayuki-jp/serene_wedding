@@ -11,7 +11,7 @@
   }
 }
 
-.fotter__upper {
+.footer__upper {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -28,6 +28,7 @@
   font-size: 2.4rem;
   font-weight: bold;
   line-height: 1.75;
+  text-align: center;;
 }
 
 .footer__navLink {
@@ -38,6 +39,7 @@
 
 .footer__navList {
   display: flex;
+  justify-content: center;
   gap: 40px;
   @include sp {
     flex-wrap: wrap;

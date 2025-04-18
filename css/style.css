@@ -347,7 +347,7 @@ img {
   }
 }
 
-.fotter__upper {
+.footer__upper {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -355,7 +355,7 @@ img {
   border-bottom: 1px solid #bbb;
 }
 @media screen and (max-width: 969px) {
-  .fotter__upper {
+  .footer__upper {
     flex-direction: column;
     align-items: center;
     gap: 24px;
@@ -366,6 +366,7 @@ img {
   font-size: 2.4rem;
   font-weight: bold;
   line-height: 1.75;
+  text-align: center;
 }
 
 .footer__navLink {
@@ -376,6 +377,7 @@ img {
 
 .footer__navList {
   display: flex;
+  justify-content: center;
   gap: 40px;
 }
 @media screen and (max-width: 969px) {
