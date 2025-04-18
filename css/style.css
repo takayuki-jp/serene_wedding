@@ -44,6 +44,10 @@ body {
   overflow-x: hidden;
 }
 
+.noScroll {
+  overflow: hidden;
+}
+
 a:hover {
   cursor: pointer;
 }
@@ -134,10 +138,7 @@ img {
   padding-bottom: 24px;
   font-size: 2.4rem;
   font-weight: bold;
-}
-
-.header__spLogo {
-  display: none;
+  transition: opacity 0.3s ease;
 }
 
 .header__logo span {
@@ -275,21 +276,11 @@ img {
     bottom: 0;
     left: 0;
   }
-  .header__spMenuBtn.active > span:nth-child(1) {
-    transform: rotate(45deg);
-    top: 50%;
-  }
-  .header__spMenuBtn.active > span:nth-child(2) {
-    opacity: 0;
-  }
-  .header__spMenuBtn.active > span:nth-child(3) {
-    transform: rotate(-45deg);
-    top: 50%;
-  }
   .header__spLogo {
     display: block;
     font-size: 2.4rem;
     font-weight: bold;
+    transition: opacity 0.3s ease;
   }
   .header__spLogo span {
     font-size: 2rem;
@@ -322,6 +313,27 @@ img {
   .header__snsList {
     margin-top: 0;
   }
+  .header.panelActive .header__spMenuBtn > span:nth-child(1) {
+    transform: rotate(45deg);
+    top: 50%;
+  }
+  .header.panelActive .header__spMenuBtn > span:nth-child(2) {
+    opacity: 0;
+  }
+  .header.panelActive .header__spMenuBtn > span:nth-child(3) {
+    transform: rotate(-45deg);
+    top: 50%;
+  }
+  .header.panelActive .header__spLogo {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
+  .header.panelActive .header__nav--sp {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all;
+  }
 }
 .footer__inner {
   width: 100%;
@@ -335,7 +347,7 @@ img {
   }
 }
 
-.fotter__upper {
+.footer__upper {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -343,7 +355,7 @@ img {
   border-bottom: 1px solid #bbb;
 }
 @media screen and (max-width: 969px) {
-  .fotter__upper {
+  .footer__upper {
     flex-direction: column;
     align-items: center;
     gap: 24px;
@@ -354,6 +366,7 @@ img {
   font-size: 2.4rem;
   font-weight: bold;
   line-height: 1.75;
+  text-align: center;
 }
 
 .footer__navLink {
@@ -364,6 +377,7 @@ img {
 
 .footer__navList {
   display: flex;
+  justify-content: center;
   gap: 40px;
 }
 @media screen and (max-width: 969px) {
@@ -502,7 +516,7 @@ img {
 .plan__tabList {
   display: flex;
   justify-content: space-between;
-  margin-top: 40px;
+  margin: 0 auto 40px;
 }
 
 .plan__tabItem {
@@ -536,12 +550,18 @@ img {
 .plan__block {
   width: 100%;
   max-width: 640px;
-  margin: 40px auto 0;
+  height: 0;
+  margin: 0 auto;
+  opacity: 0;
+  visibility: hidden;
+  overflow: hidden;
+  transition: opacity 2s ease, height 2s ease;
 }
 
-.plan__block--sea,
-.plan__block--green {
-  display: none; /* 一旦非表示にする */
+.plan__block.is-active {
+  height: auto;
+  opacity: 1;
+  visibility: visible;
 }
 
 .plan__imageWrap > img {
@@ -744,9 +764,23 @@ img {
 }
 
 .gallery__imgWrap {
+  position: relative;
   width: 100%;
   height: 100%;
   overflow: hidden;
+}
+
+.gallery__imgWrap::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  border: solid 0 rgba(255, 255, 255, 0.5);
+  transition: all 0.4s ease;
+  pointer-events: none;
 }
 
 .gallery__imgWrap img {
@@ -755,6 +789,63 @@ img {
   -o-object-fit: cover;
      object-fit: cover;
   display: block;
+  transition: all 0.4s ease;
+}
+
+/* hover */
+.gallery__item:hover .gallery__imgWrap::after {
+  border-width: 15px;
+}
+
+.gallery__item:hover .gallery__imgWrap img {
+  transform: scale(1.1) rotate(1deg);
+  filter: brightness(1.1);
+}
+
+/* modal */
+.modal {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  z-index: 1000;
+}
+
+.modal.is-active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal__content {
+  position: relative;
+  max-width: 80%;
+  max-height: 80%;
+}
+
+.modal__content img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.modal__close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 3rem;
+  cursor: pointer;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
 }
 
 .cta__gridWrap {

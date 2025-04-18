@@ -156,7 +156,7 @@
               <li class="plan__tabItem"><a class="plan__tabLink" href="#green">新緑の<br class="sp-only">ウエディング</a></li>
             </ul>
 
-          <div id="season" class="plan__block plan__block--season">
+          <div id="season" class="plan__block is-active plan__block--season">
             <div class="plan__imageWrap">
               <img src="./img/plan_1.webp" alt="四季のウエディングイメージ画像">
             </div>
@@ -273,7 +273,11 @@
             <div class="gallery__gallery">
               <!-- 1行目 -->
               <div class="gallery__row gallery__row--1">
-                <div class="gallery__item"><div class="gallery__imgWrap"><img src="./img/grid-img01.webp" alt=""></div></div>
+                <div class="gallery__item">
+                  <div class="gallery__imgWrap">
+                    <img src="./img/grid-img01.webp" alt="">
+                  </div>
+                </div>
                 <div class="gallery__item"><div class="gallery__imgWrap"><img src="./img/grid-img02.webp" alt=""></div></div>
                 <div class="gallery__item"><div class="gallery__imgWrap"><img src="./img/grid-img03.webp" alt=""></div></div>
                 <div class="gallery__item"><div class="gallery__imgWrap"><img src="./img/grid-img04.webp" alt=""></div></div>
@@ -291,6 +295,14 @@
                 <div class="gallery__item"><div class="gallery__imgWrap"><img src="./img/grid-img10.webp" alt=""></div></div>
               </div>
             </div>
+
+            <div id="modal" class="modal">
+              <div class="modal__content">
+                <img id="modalImage" src="" alt="拡大画像">
+                <button class="modal__close">&times;</button>
+              </div>
+            </div>
+          </div>
         </section>
 
         <section id="cta" class="cta">
